@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
 })
-export class CardComponent implements OnInit {
+export class CardComponent {
 
   character =  {
     "id": 1,
@@ -69,10 +69,4 @@ export class CardComponent implements OnInit {
     "url": "https://rickandmortyapi.com/api/character/1",
     "created": "2017-11-04T18:48:46.250Z"
   }
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
