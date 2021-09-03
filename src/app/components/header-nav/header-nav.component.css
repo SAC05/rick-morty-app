@@ -1,9 +1,9 @@
 .menu {
     align-items: center;
-    background-color:#ffebca ;
-    border-bottom: 10px solid #2c4450;
-    border-top: 10px solid #2c4450;
-    background-color:#ffebca ;
+    background-color: #FFEBCA;
+    border-bottom: 10px solid #2C4450;
+    border-top: 10px solid #2C4450;
+    background-color: #FFEBCA;
     display: flex;
     justify-content: space-around;
     margin: 0px 0px;
