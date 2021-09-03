@@ -1,0 +1,27 @@
+.menu {
+    align-items: center;
+    background-color: #FFEBCA;
+    border-bottom: 10px solid #2C4450;
+    border-top: 10px solid #2C4450;
+    background-color: #FFEBCA;
+    display: flex;
+    justify-content: space-around;
+    margin: 0px 0px;
+}
+
+.image {
+    cursor: pointer;
+    height: 70px;
+    transition: all 300ms;
+}
+
+.input {
+    cursor: text;
+    height: 30px;
+    width: 300px;
+}
+
+.body {
+    background: grey;
+    margin-top: 0%;
+}
