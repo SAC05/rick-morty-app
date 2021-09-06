@@ -7,7 +7,5 @@ import { Result } from 'src/app/interfaces/character.interface';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
-
   @Input() character!: Result;
-
 }
