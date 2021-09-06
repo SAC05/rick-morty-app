@@ -1,6 +1,6 @@
-<div class="card">
+<div *ngIf="character" class="card">
     <img [src]="character.image" alt="Rick photo" class="image">
-    <div>
+    <div class="content">
         <h1>{{character.name}}</h1>
         <p><strong>Status: </strong>{{character.status}}</p>
         <p><strong>Location: </strong>{{character.origin.name}}</p>  

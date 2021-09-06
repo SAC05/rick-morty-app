@@ -6,7 +6,7 @@
     color: blanchedalmond;
     display: flex;
     justify-content: space-between;
-    margin: 80px 45px;
+    margin: 25px 18px;
     padding: 15px;
     padding-left: 10px;
     transition: all 300ms;
@@ -27,4 +27,8 @@
 
 .image:hover {
     transform: scale(1.05, 1.05);
+}
+
+.content {
+    width: 50%;
 }
