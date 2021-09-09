@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CharactersResponse, Result } from './interfaces/character.interface';
+import { Apollo, gql } from 'apollo-angular';
+import { Result } from './interfaces/character.interface';
 import { CharactersService } from './services/characters.service';
 
 @Component({
@@ -10,12 +11,28 @@ import { CharactersService } from './services/characters.service';
 export class AppComponent implements OnInit {
 
   charactersList: Result[] = [];
-  constructor(private _characterService: CharactersService) {}
+  constructor(private apollo: Apollo) {}
 
   ngOnInit(): void {
-    this._characterService.getCharacters()
-      .subscribe((characters: CharactersResponse) => {
-        this.charactersList = characters.results;
-      });
+    this.apollo.watchQuery({
+      query: gql`
+      {
+        characters(page: 1) {
+          results {
+            id
+            name
+            image
+            status
+            location {
+              name
+            }
+          } 
+        }
+      }`,
+    })
+    .valueChanges.subscribe((result: any) => {
+      console.log(result);
+      this.charactersList = result.data.characters.results;
+    })
   }
 }
