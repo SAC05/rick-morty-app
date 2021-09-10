@@ -1,17 +1,31 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
+import { Apollo, gql } from 'apollo-angular';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CharactersService {
 
-  constructor(private _http: HttpClient) { }
+  constructor(private apollo: Apollo) { }
 
   getCharacters(): Observable<any> {
-    let endpoint = `${environment.rmApiBase}/character`;
-    return this._http.get(endpoint);
+    return this.apollo.watchQuery({
+      query: gql`
+      {
+        characters(page: 1) {
+          results {
+            id
+            name
+            image
+            status
+            location {
+              name
+            }
+          } 
+        }
+      }`,
+    })
+    .valueChanges;
   }
 }
