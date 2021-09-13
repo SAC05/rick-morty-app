@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardComponent } from './components/card/card.component';
 import { HeaderNavComponent } from './components/header-nav/header-nav.component';
+import { GraphQLModule } from './graphql.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HeaderNavComponent } from './components/header-nav/header-nav.component
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    GraphQLModule
   ],
   providers: [],
   bootstrap: [AppComponent]

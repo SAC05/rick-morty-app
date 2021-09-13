@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  rmApiBase: 'https://rickandmortyapi.com/api/'
+  rmApiBase: 'https://rickandmortyapi.com/graphql'
 };
 
 /*

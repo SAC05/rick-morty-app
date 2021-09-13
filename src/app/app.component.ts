@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CharactersResponse, Result } from './interfaces/character.interface';
+import { Result } from './interfaces/character.interface';
 import { CharactersService } from './services/characters.service';
 
 @Component({
@@ -10,12 +10,11 @@ import { CharactersService } from './services/characters.service';
 export class AppComponent implements OnInit {
 
   charactersList: Result[] = [];
-  constructor(private _characterService: CharactersService) {}
+  constructor(private characterService: CharactersService) {}
 
   ngOnInit(): void {
-    this._characterService.getCharacters()
-      .subscribe((characters: CharactersResponse) => {
-        this.charactersList = characters.results;
-      });
+    this.characterService.getCharacters().subscribe((result: any) => {
+      this.charactersList = result.data.characters.results;
+    });
   }
 }
