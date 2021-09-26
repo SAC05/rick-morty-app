@@ -9,11 +9,11 @@ export class CharactersService {
 
   constructor(private apollo: Apollo) { }
 
-  getCharacters(): Observable<any> {
+  getCharacters(page: number): Observable<any> {
     return this.apollo.watchQuery({
       query: gql`
       {
-        characters(page: 1) {
+        characters(page: ${page}) {
           results {
             id
             name
