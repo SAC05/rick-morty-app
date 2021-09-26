@@ -2,3 +2,8 @@
 <div class="list">
     <app-card *ngFor="let character of charactersList" [character]="character"></app-card>
 </div>
+<img *ngIf="charactersList.length > 0" 
+     class="toTopButton" 
+     src="../assets/Images/to-top-button.png" 
+     alt="toTopButton"
+     (click)="goToTop()">

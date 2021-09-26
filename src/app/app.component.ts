@@ -34,4 +34,11 @@ export class AppComponent implements OnInit {
       this.loadCharacters(this.currentPage);
     }
   }
+
+  goToTop(): void {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
 }
