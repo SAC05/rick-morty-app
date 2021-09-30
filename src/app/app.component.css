@@ -3,3 +3,15 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.toTopButton {
+    background-color: whitesmoke;
+    border: 3px solid black;
+    border-radius: 10px;
+    bottom: 15px;
+    cursor: pointer;
+    display: block;
+    left: 15px;
+    padding: 10px;
+    position: sticky;
+}
