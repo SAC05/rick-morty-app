@@ -5,13 +5,13 @@
 }
 
 .toTopButton {
-    background-color: whitesmoke;
-    border: 3px solid black;
-    border-radius: 10px;
+    background-color: #FFEBCA; 
+    border-radius: 50%; 
     bottom: 15px;
     cursor: pointer;
     display: block;
     left: 15px;
-    padding: 10px;
+    padding: 0px;
     position: sticky;
 }
+

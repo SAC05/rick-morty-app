@@ -7,12 +7,21 @@
     display: flex;
     justify-content: space-around;
     margin: 0px 0px;
+    padding: 15px;
+    transition: all 400ms;
 }
 
 .image {
     cursor: pointer;
-    height: 70px;
-    transition: all 300ms;
+    height: 80px;
+    width: auto;
+    transition: all 400ms;
+   
+}
+
+.image:hover {
+    filter: drop-shadow(5px 5px 6px rgb(117, 9, 9)); 
+    transform: scale(1.2, 1.2);
 }
 
 .input {
