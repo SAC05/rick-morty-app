@@ -33,3 +33,33 @@
 .content {
     width: 50%;
 }
+
+@media (max-width: 530px) {
+    .card {
+        flex-direction: column;
+        width: 250px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 325px) {
+    .card {
+        flex-direction: column;
+        width: 200px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+}
